@@ -7,7 +7,6 @@ function App() {
   // Changes made
   return (
     <div className="App">
-      <h1> CHANGES MADE</h1>
      <AppRoutes/>
     </div>
   );
