@@ -1,17 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import {BrowserRouter} from 'react-router-dom'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { UserInfoContextProvider } from './contexts/user-info-context';
+import styled from 'styled-components'
+
+/*
+Add CSS in JS Script - https://www.smashingmagazine.com/2016/04/finally-css-javascript-meet-cssx/
+var sheet = cssx();
+sheet.add('p > a', {
+  'font-size': '20px'
+});
+
+Add CSS in the React Components using styled-components
+https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822
+ */
+
+const Div = styled.div`
+  margin: 400px;
+  border: 5px outset pink;
+  &:hover {
+  background-color: yellow;
+  }
+
+`;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <UserInfoContextProvider>
+      <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </UserInfoContextProvider>
+
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,0 +1,41 @@
+Requirements - 
+Temporary Database used -  Firebase
+ 2 Tables 
+    - Globally - Store the User Information
+    - For Each user, Store the Expense Information
+
+
+Welcome Page
+
+Registration Page - 
+Form 
+You have Signed Up
+-- Implicitely assign a user_id_number - Store in the DB
+-- useState Variable
+
+Login Page -
+    Logged In Page - 
+    -- For that particular Credential - find the UserID from db
+    -- Navigate to route /user_id
+    -- Options -     -- Go to All Exoenses, New Expense
+
+    New Expenses 
+    -route - /user_id/new
+    -stored in - POST to -  users/{user_id}/expenses.json
+
+    All Expenses List
+    - Fetch Expenses from - /{user_id}/expenses.json 
+    - Show all the details in Table Format
+
+    Actions that can be perfomed -
+    1. Edit
+    2. Delete
+    3. New Expense
+
+
+
+// Goals - 
+// 1. Get the user info from the database, and store it in a list.
+// 2. whenever a user signs in - search that list for their UserId
+// 3. whenever an user adds an expense - store that in the Database as /user_expenses/user_id/expenses.json
+// 
